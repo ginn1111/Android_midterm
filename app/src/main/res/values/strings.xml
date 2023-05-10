@@ -1,0 +1,14 @@
+<resources>
+  <string name="hint_search">Search NFTs</string>
+  <string name="slogan">Let’s find masterpiece Art</string>
+  <string name="welcome">Hello Gin  👋</string>
+  <string name="logo_alt">Logo</string>
+  <string name="user_avatar">User avatar</string>
+  <string name="nft_img_desc">NFT Image</string>
+  <string name="eth_icon">Eth icon</string>
+  <string name="detail_btn">Detail</string>
+  <string name="price_test">4.25</string>
+  <string name="name_test">Abstracto #312</string>
+  <string name="author_test">by Gin</string>
+  <string name="app_name">HomeScreen</string>
+</resources>

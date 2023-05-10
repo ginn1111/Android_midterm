@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Base application theme. -->
+  <style name="Theme.HomeScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <!-- Primary brand color. -->
+    <item name="colorPrimary">@color/primary</item>
+    <item name="android:statusBarColor">?attr/colorPrimary</item>
+  </style>
+</resources>

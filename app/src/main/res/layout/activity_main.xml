@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+  <FrameLayout
+      android:id="@+id/frameLayout"
+      android:layout_width="match_parent"
+      android:layout_height="300dp"
+      android:background="@color/primary"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+  </FrameLayout>
+
+  <TextView
+      android:id="@+id/welcome"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="14dp"
+      android:text="@string/welcome"
+      android:textColor="#fff"
+      android:textSize="12sp"
+      app:layout_constraintStart_toStartOf="@id/brLogo"
+      app:layout_constraintTop_toBottomOf="@id/logo" />
+
+  <TextView
+      android:id="@+id/slogan"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="@string/slogan"
+      android:textColor="#fff"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="@id/brLogo"
+      app:layout_constraintTop_toBottomOf="@id/welcome" />
+
+  <EditText
+      android:id="@+id/edtSearch"
+      android:layout_width="0dp"
+      android:maxWidth="350dp"
+      android:layout_height="48dp"
+      android:layout_marginTop="14dp"
+      android:autofillHints="search"
+      android:background="@drawable/search_custom"
+      android:drawableStart="@drawable/ic_search"
+      android:drawablePadding="14dp"
+      android:hint="@string/hint_search"
+      android:inputType="text"
+      android:paddingHorizontal="14dp"
+      android:textColor="@color/black"
+      android:textColorHint="@color/black_900"
+      android:textSize="14sp"
+      app:layout_constraintEnd_toStartOf="@id/brAvatarRight"
+      app:layout_constraintStart_toStartOf="@id/brLogo"
+      app:layout_constraintTop_toBottomOf="@id/slogan" />
+
+  <ImageView
+      android:id="@+id/logo"
+      style="@style/mt_header_img"
+      android:layout_width="90dp"
+      android:layout_height="25dp"
+      android:layout_marginStart="14dp"
+      android:layout_marginTop="33dp"
+      android:contentDescription="@string/logo_alt"
+      android:src="@drawable/logo"
+      app:layout_constraintEnd_toStartOf="@+id/avatar"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintHorizontal_chainStyle="spread_inside"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/avatar"
+      android:layout_width="45dp"
+      android:layout_height="45dp"
+      android:layout_marginTop="24dp"
+      android:layout_marginEnd="14dp"
+      app:cardCornerRadius="22.5dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/logo"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/user_avatar"
+        android:src="@drawable/avatar" />
+  </androidx.cardview.widget.CardView>
+
+  <androidx.constraintlayout.widget.Barrier
+      android:id="@+id/brAvatar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:barrierDirection="top"
+      app:constraint_referenced_ids="avatar" />
+
+  <androidx.constraintlayout.widget.Barrier
+      android:id="@+id/brLogo"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:barrierDirection="left"
+      app:constraint_referenced_ids="logo" />
+
+  <androidx.constraintlayout.widget.Barrier
+      android:id="@+id/brAvatarRight"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:barrierDirection="right"
+      app:constraint_referenced_ids="avatar"
+      tools:layout_editor_absoluteX="397dp" />
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/cardBanner"
+      app:layout_constraintStart_toEndOf="@+id/brLogo"
+      app:layout_constraintEnd_toStartOf="@+id/brAvatarRight"
+      app:layout_constraintTop_toBottomOf="@+id/edtSearch"
+      app:cardCornerRadius="10dp"
+      app:cardElevation="3dp"
+      android:layout_width="0dp"
+      android:layout_marginTop="10dp"
+      android:layout_height="150dp" >
+    <ViewFlipper
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+        android:id="@+id/banner" />
+  </androidx.cardview.widget.CardView>
+
+  <ListView
+      android:id="@+id/lvNFT"
+      android:scrollbars="none"
+      android:divider="@android:color/transparent"
+      android:dividerHeight="32dp"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginTop="24dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="@+id/brLogo"
+      app:layout_constraintEnd_toStartOf="@+id/brAvatarRight"
+      app:layout_constraintTop_toBottomOf="@+id/cardBanner" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
